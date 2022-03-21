@@ -10,6 +10,8 @@ services:
       - redis
     environment:
       - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672
+    links:
+      - rabbitmq
 
   rabbitmq:
     image: rabbitmq:management-alpine
